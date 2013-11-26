@@ -5,9 +5,9 @@ angular.module('yourAppName', ['filters']);
  * @ngdoc filter
  * @name capitalize
  * @description
- * The capitalize filter takes a string and turns every word ( space seperated ) into a capitalized string.
+ * The capitalize filter takes a string and turns every word ( space separated ) into a capitalized string.
  * this sentence will be the following. -> This Sentence Will Be The Following.
- * @param {String} xml unformatted XML
+ * @param {String} expects a string
  */
 angular.module('filters', []).
     filter('truncate', function () {
