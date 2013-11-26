@@ -1,8 +1,5 @@
-// add the filter to your application module
-angular.module('yourAppName', ['filters']);
-
 /**
- * @ngdoc filter
+ * @ngdoc filters
  * @name capitalize
  * @description
  * The capitalize filter takes a string and turns every word ( space separated ) into a capitalized string.
