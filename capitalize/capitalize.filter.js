@@ -1,6 +1,6 @@
 // add the filter to your application module
 angular.module('yourAppName', ['filters']);
- 
+
 /**
  * @ngdoc filter
  * @name capitalize
@@ -11,16 +11,16 @@ angular.module('yourAppName', ['filters']);
  */
 angular.module('filters', []).
     filter('truncate', function () {
-  return function (string) {
-    var words = null;
-    if(angular.isString(string)) {
-      words = string.toLowerCase().split(' ');
-      words.forEach(function (value, index) {
-        words[index] = value.charAt(0).toUpperCase() + value.slice(1);
-      });
-      return words.join();
-    } else {
-      return string;
-    }
-  };
+      return function (string) {
+        var words = null;
+        if(angular.isString(string)) {
+          words = string.toLowerCase().split(' ');
+          words.forEach(function (value, index) {
+            words[index] = value.charAt(0).toUpperCase() + value.slice(1);
+          });
+          return words.join();
+        } else {
+          return string;
+        }
+      };
     });
