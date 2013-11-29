@@ -7,7 +7,7 @@
  * @param {String} expects a string
  */
 angular.module('filters', []).
-    filter('truncate', function () {
+    filter('capitalize', function () {
       return function (string) {
         var words = null;
         if(angular.isString(string)) {
