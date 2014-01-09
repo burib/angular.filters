@@ -6,7 +6,7 @@
  * The unique filter takes an array and returns an other with the duplications removed if the key is defined.
  * @param {Array}
  */
-app.filter('unique', function () {
+angular.module('filters', []).filter('unique', function () {
   return function (input, key) {
     var unique = {},
       uniqueList = [],
