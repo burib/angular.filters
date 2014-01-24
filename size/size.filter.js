@@ -8,20 +8,21 @@
  * @param {Object|Array|string}
  * @returns {number} The size of `obj` or `0` if `obj` is neither an object nor an array.
  */
-app.filter('size', function () {
-  return function(obj) {
-    var size = 0, key;
+angular.module('filters', [])
+  .filter('size', function () {
+    return function (obj) {
+      var size = 0, key;
 
-    if(angular.isArray(obj) || angular.isString(obj)) {
-      size = obj.length;
-    } else if(angular.isObject(obj)) {
-      for (key in obj) {
-        if(obj.hasOwnProperty(key)) {
-          size++;
+      if (angular.isArray(obj) || angular.isString(obj)) {
+        size = obj.length;
+      } else if (angular.isObject(obj)) {
+        for (key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            size++;
+          }
         }
       }
-    }
 
-    return size;
-  };
-});
+      return size;
+    };
+  });
